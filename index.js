@@ -237,9 +237,17 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+  let isVowel = function(ch) {
+    if (ch === 'a' || ch === 'e' || ch == 'i' || ch === 'o' || ch === 'u') {
+      return 1;
+    } return 0;
+  }
+  return str.toLowerCase().split('')
+    .reduce((acc, ch) => acc + isVowel(ch), 0);
 }
+
+console.log(vowelCounter("hEllo aAe0ruuU"));
 
 
 
