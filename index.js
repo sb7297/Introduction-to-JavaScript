@@ -142,7 +142,13 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  if (user === computer) return "it's a tie";
+  if (user === "rock" && computer === "scissors"  ||
+      user === "scissors" && computer === "paper" ||
+      user === "paper" && computer === "rock") {
+    return "you win!";
+  }
+  return "you lose!";
 }
   
   
